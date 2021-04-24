@@ -76,5 +76,5 @@ debug: $(BIN)
 
 
 clean:
-	-rm -i $(SRC)/*.o \
+	-rm $(SRC)/*.o \
 	$(TARGET)/*
