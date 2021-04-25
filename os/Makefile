@@ -11,8 +11,8 @@ LD := $(GCCPREFIX)ld
 
 CFLAGS := -mcmodel=medany -std=gnu99 -Wno-unused -Werror
 CFLAGS += -fno-builtin -nostdinc
-CFLAGS += -nostdlib -g
-CFLAGS += -I./include
+CFLAGS += -nostdlib -g -c
+CFLAGS += -I ./include
 
 LDFLAGS	:= -nostdlib
 
@@ -34,7 +34,7 @@ RUSTSBI_BIN := $(FW)/rustsbi-qemu.bin
 ifeq ($(platform), k210)
 OBJS += $(SRC)/entry_k210.o
 else
-OBJS += $(SRC)/entry.o
+OBJS += $(SRC)/loader/entry.o
 endif
 
 # objs
