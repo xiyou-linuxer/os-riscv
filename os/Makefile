@@ -12,7 +12,7 @@ LD := $(GCCPREFIX)ld
 CFLAGS := -mcmodel=medany -std=gnu99 -Wno-unused -Werror
 CFLAGS += -fno-builtin -nostdinc
 CFLAGS += -nostdlib -g -c
-CFLAGS += -I ./include
+CFLAGS += -I ./src/include
 
 LDFLAGS	:= -nostdlib
 
