@@ -1,7 +1,7 @@
-#include "include/stdio.h"
-#include "include/stddef.h"
-#include "include/console.h"
-#include "include/string.h"
+#include <stdio.h>
+#include <stddef.h>
+#include <console.h>
+#include <string.h>
 
 
 #define MAX(a, b) ((a) > (b) ? (a) : (b))

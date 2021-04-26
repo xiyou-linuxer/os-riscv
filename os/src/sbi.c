@@ -1,4 +1,4 @@
-#include "include/sbi.h"
+#include <sbi.h>
 
 
 struct sbiret sbi_ecall(int ext, int fid, unsigned long arg0,

@@ -5,6 +5,10 @@ SRC := src
 FW := ../bootloader
 QEMU := qemu-system-riscv64
 GCCPREFIX := riscv64-unknown-elf-
+PWD := $(shell pwd)
+mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
+# current_dir := $(notdir $(patsubst %/,%,$(dir $(mkfile_path))))
+
 
 CC := $(GCCPREFIX)gcc
 LD := $(GCCPREFIX)ld
@@ -12,7 +16,8 @@ LD := $(GCCPREFIX)ld
 CFLAGS := -mcmodel=medany -std=gnu99 -Wno-unused -Werror
 CFLAGS += -fno-builtin -nostdinc
 CFLAGS += -nostdlib -g -c
-CFLAGS += -I ./src/include
+# CFLAGS += -I /home/huloves/repositories/Xiyou-LUG/os-riscv/os/src/include
+CFLAGS += -I $(PWD)/src/include
 
 LDFLAGS	:= -nostdlib
 
@@ -42,8 +47,8 @@ OBJS += \
   $(SRC)/main.o \
   $(SRC)/sbi.o \
   $(SRC)/console.o \
-  $(SRC)/stdio.o \
-  $(SRC)/string.o \
+  $(SRC)/lib/stdio.o \
+  $(SRC)/lib/string.o \
   $(SRC)/timer.o \
   $(SRC)/exception.o \
   $(SRC)/exception_entry.o \

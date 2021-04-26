@@ -1,5 +1,5 @@
-#include "include/stddef.h"
-#include "include/string.h"
+#include <stddef.h>
+#include <string.h>
 
 #define SS (sizeof(size_t))
 #define ALIGN (sizeof(size_t) - 1)
