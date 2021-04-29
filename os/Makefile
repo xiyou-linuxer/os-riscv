@@ -44,7 +44,7 @@ endif
 
 # objs
 OBJS += \
-  $(SRC)/main.o \
+  $(SRC)/kernel/main.o \
   $(SRC)/sbi.o \
   $(SRC)/console.o \
   $(SRC)/lib/stdio.o \
@@ -53,7 +53,9 @@ OBJS += \
   $(SRC)/exception.o \
   $(SRC)/exception_entry.o \
   $(SRC)/panic.o \
-  $(SRC)/syscall.o
+  $(SRC)/syscall.o \
+  $(SRC)/lib/kernel-stdio.o \
+  $(SRC)/kernel/init.o
 
 # linker
 LINKER := $(SRC)/linker.ld

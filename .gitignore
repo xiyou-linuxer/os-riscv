@@ -44,5 +44,5 @@ dkms.conf
 *.img
 *.bin
 main
-.vscodn/
-kernel
+.vscode/
+target/
