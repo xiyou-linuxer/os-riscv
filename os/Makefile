@@ -50,12 +50,13 @@ OBJS += \
   $(SRC)/lib/stdio.o \
   $(SRC)/lib/string.o \
   $(SRC)/timer.o \
-  $(SRC)/exception.o \
+  $(SRC)/kernel/exception.o \
   $(SRC)/exception_entry.o \
   $(SRC)/panic.o \
   $(SRC)/syscall.o \
   $(SRC)/lib/kernel-stdio.o \
-  $(SRC)/kernel/init.o
+  $(SRC)/kernel/init.o \
+  $(SRC)/kernel/interrupt.o
 
 # linker
 LINKER := $(SRC)/linker.ld

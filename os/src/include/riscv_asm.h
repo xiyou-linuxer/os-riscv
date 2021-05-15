@@ -1,6 +1,8 @@
 #ifndef _RISCV_ASM_H
 #define _RISCV_ASM_H
 
+#include <stddef.h>
+
 #ifdef __ASSEMBLER__
 #define __ASM_STR(x)	x
 #else
