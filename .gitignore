@@ -42,7 +42,7 @@ dkms.conf
 
 # Another
 *.img
-*.bin
+# *.bin
 main
 .vscode/
 target/

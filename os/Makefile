@@ -55,8 +55,8 @@ OBJS += \
   $(SRC)/panic.o \
   $(SRC)/syscall.o \
   $(SRC)/lib/kernel-stdio.o \
-  $(SRC)/kernel/init.o \
-  $(SRC)/kernel/interrupt.o
+  $(SRC)/kernel/init.o
+#   $(SRC)/kernel/interrupt.o
 
 # linker
 LINKER := $(SRC)/linker.ld
@@ -84,5 +84,5 @@ debug: $(BIN)
 
 
 clean:
-	-rm $(SRC)/*.o \
+	-rm $(SRC)/*.o $(SRC)/kernel/*.o \
 	$(TARGET)/*
