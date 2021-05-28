@@ -6,6 +6,7 @@
 
 #define PAGE_SIZE 4096L
 #define PAGE_OFFSET_BITS 12L
+#define MEMORY_END 0x80800000L   // 可用内存的结束位置
 
 /* 物理和虚拟 地址和页号 */
 typedef uintptr_t phys_addr_t;

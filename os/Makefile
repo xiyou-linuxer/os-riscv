@@ -56,7 +56,8 @@ OBJS += \
   $(SRC)/syscall.o \
   $(SRC)/lib/kernel-stdio.o \
   $(SRC)/kernel/init.o \
-  $(SRC)/mm/page_table.o
+  $(SRC)/mm/page_table.o \
+  $(SRC)/lib/bitmap_buddy.o
 #   $(SRC)/kernel/interrupt.o
 
 # linker
