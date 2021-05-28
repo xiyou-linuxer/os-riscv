@@ -6,6 +6,7 @@
 #include <timer.h>
 #include <assert.h>
 #include <sbi.h>
+#include <frame_allocator.h>
 
 int i;
 extern uintptr_t skernel;
@@ -35,6 +36,9 @@ void main()
 	printk("boot_stack : 		[%p ~ %p]\n", &boot_stack, &boot_stack_top);
 	printk(".bss : 			[%p ~ %p]\n", &sbss, &ebss);
 	printk("kernel_end: 		[%p]\n", &ekernel);
+
+	mm_init();
+	frame_test();
 
 	idt_init();
 	irq_enable();

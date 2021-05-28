@@ -20,12 +20,19 @@ struct frame_allocator
 
 extern struct bitmap_buddy* HEAP_ALLOCATOR;
 
-phys_page_num_t frame_alloc_(struct frame_allocator* self);
+phys_page_num_t frame_alloc(struct frame_allocator* self);
 void frame_dealloc(struct frame_allocator* self, phys_page_num_t ppn);
 uint64_t frame_remain_size(struct frame_allocator* self);
+void frame_test();
 
 void heap_allocator_init();
 void frame_allocator_init();
 
+static inline void mm_init()
+{
+    heap_allocator_init();
+    frame_allocator_init();
+    // page_activate();
+}
 
 #endif

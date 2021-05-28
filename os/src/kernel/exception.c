@@ -81,12 +81,12 @@ void idt_init(void)
     printf("set restore : [%p]\n", &__restore);
 }
 
-intr_status_t intr_get_status()
-{
-    uint64_t sstatus_value;
-    sstatus_value = csr_read(sstatus);
+// intr_status_t intr_get_status()
+// {
+    // uint64_t sstatus_value;
+    // sstatus_value = csr_read(sstatus);
     // !!!!!!----------------------------------
-}
+// }
 
 void irq_enable(void)
 {

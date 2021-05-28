@@ -15,7 +15,8 @@ LD := $(GCCPREFIX)ld
 
 CFLAGS := -Wall -O -mcmodel=medany -std=gnu99 -Wno-unused -Werror
 CFLAGS += -fno-builtin -nostdinc -fno-omit-frame-pointer
-CFLAGS += -nostdlib -ggdb -g -c
+CFLAGS += -nostdlib -ggdb -g -c -MD -mcmodel=medany
+CFLAGS += -ffreestanding -fno-common
 # CFLAGS += -I /home/huloves/repositories/Xiyou-LUG/os-riscv/os/src/include
 CFLAGS += -I $(PWD)/src/include
 
