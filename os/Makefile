@@ -13,9 +13,9 @@ mkfile_path := $(abspath $(lastword $(MAKEFILE_LIST)))
 CC := $(GCCPREFIX)gcc
 LD := $(GCCPREFIX)ld
 
-CFLAGS := -mcmodel=medany -std=gnu99 -Wno-unused -Werror
-CFLAGS += -fno-builtin -nostdinc
-CFLAGS += -nostdlib -g -c
+CFLAGS := -Wall -O -mcmodel=medany -std=gnu99 -Wno-unused -Werror
+CFLAGS += -fno-builtin -nostdinc -fno-omit-frame-pointer
+CFLAGS += -nostdlib -ggdb -g -c
 # CFLAGS += -I /home/huloves/repositories/Xiyou-LUG/os-riscv/os/src/include
 CFLAGS += -I $(PWD)/src/include
 
@@ -57,7 +57,10 @@ OBJS += \
   $(SRC)/lib/kernel-stdio.o \
   $(SRC)/kernel/init.o \
   $(SRC)/mm/page_table.o \
-  $(SRC)/lib/bitmap_buddy.o
+  $(SRC)/lib/bitmap_buddy.o \
+  $(SRC)/lib/max_heap.o \
+  $(SRC)/mm/heap_allocator.o \
+  $(SRC)/mm/frame_allocator.o
 #   $(SRC)/kernel/interrupt.o
 
 # linker
